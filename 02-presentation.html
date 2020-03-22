@@ -1,0 +1,151 @@
+<section id="presentation">
+
+    <section>
+        <h2>Présentation</h2>
+    </section>
+
+    <section>
+        <h3>Protocole HTTP</h3>
+        <p>HTTP est un protocole permettant d'effectuer des <strong>requêtes sur un réseau</strong> et est principalement utilisé par les navigateur web pour <strong>récupérer les données des pages web</strong>.</p>
+        <p>Ce protocole a été créé par Tim Berners-Lee (également créateur du World Wide Web et du langage HTML) en 1989.</p>
+    </section>
+
+    <section>
+        <h3>Protocole</h3>
+        <blockquote>
+            <p>Un protocole informatique est un <strong>ensemble de règles</strong> qui régissent les <strong>échanges de données</strong> ou le comportement collectif de processus ou d'ordinateurs en réseaux ou d'objets connectés.</p>
+            <cite>Wikipedia</cite>
+        </blockquote>
+        <p>La Poste impose un protocole pour rédiger une adresse de destination standardisée.</p>
+        <img src="assets/images/format-lettre.jpg" alt="Format Lettre La Poste">
+    </section>
+
+    <section>
+        <h3>Le modèle OSI</h3>
+        <p>Le modèle OSI (Open Systems Interconnection) permet de <strong>décrire et standardiser les échanges de données</strong> entre les systèmes.</p>
+        <p>Son objectif est de permettre l'<strong>intéropérabilité des échanges</strong> en définissant des protocoles de communication <strong>standardisés</strong>.</p>
+    </section>
+
+    <section>
+        <h3>Le modèle OSI</h3>
+        <p>Ce modèle est découpé en 7 couches abstraites :</p>
+        <div class="osi-model-container">
+
+            <div class="osi-model-title">
+                <h4>Application</h4>
+                <div class="osi-model-datatype">Data</div>
+            </div>
+            <div class="osi-model-description">
+                <p>Permet d'afficher à l'utilisateur les données envoyées / réceptionnées.</p>
+                <ul>
+                    <li>HTTP</li>
+                    <li>FTP</li>
+                    <li>SMTP</li>
+                    <li>SSH</li>
+                </ul>
+            </div>
+
+            <div class="osi-model-title">
+                <h4>Présentation</h4>
+                <div class="osi-model-datatype">Data</div>
+            </div>
+            <div class="osi-model-description">
+                <p>Permet d'effectuer le codage/décodage des données.</p>
+                <ul>
+                    <li>SSL</li>
+                    <li>SSH</li>
+                    <li>FTP</li>
+                    <li>JPEG</li>
+                </ul>
+            </div>
+
+            <div class="osi-model-title">
+                <h4>Session</h4>
+                <div class="osi-model-datatype">Data</div>
+            </div>
+            <div class="osi-model-description">
+                <p>Permet d'ouvrir, fermer et gérer les sessions lors d'une communication.</p>
+                <ul>
+                    <li>RPC</li>
+                    <li>RTCP</li>
+                    <li>SCP</li>
+                    <li>SOCKS</li>
+                </ul>
+            </div>
+
+            <div class="osi-model-title">
+                <h4>Transport</h4>
+                <div class="osi-model-datatype">Segments</div>
+            </div>
+            <div class="osi-model-description">
+                <p>Permet de transférer les données sur le réseau.</p>
+                <ul>
+                    <li>TCP</li>
+                    <li>UDP</li>
+                </ul>
+            </div>
+
+            <div class="osi-model-title">
+                <h4>Réseau</h4>
+                <div class="osi-model-datatype">Packets</div>
+            </div>
+            <div class="osi-model-description">
+                <p>Permet de transférer des paquets entre les interfaces réseau (end-to-end communication).</p>
+                <ul>
+                    <li>IP</li>
+                    <li>IPSec</li>
+                </ul>
+            </div>
+
+            <div class="osi-model-title">
+                <h4>Liaison</h4>
+                <div class="osi-model-datatype">Frames</div>
+            </div>
+            <div class="osi-model-description">
+                <p>Permet de transférer des frames entre les interfaces réseau proches.</p>
+                <ul>
+                    <li>Ethernet</li>
+                    <li>WiFi</li>
+                    <li>Bluetooth</li>
+                </ul>
+            </div>
+
+            <div class="osi-model-title">
+                <h4>Physique</h4>
+                <div class="osi-model-datatype">Bits</div>
+            </div>
+            <div class="osi-model-description">
+                <p>Composants physiques permettant la communication sur le réseau.</p>
+                <ul>
+                    <li>Câble RJ45</li>
+                    <li>Fibre</li>
+                    <li>WiFi</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <h3>Visualiser une requête HTTP</h3>
+        <p><code class="language-shell">traceroute</code> est un programme permettant d'afficher le chemin parcouru par les paquets d'une requête sur un réseau.</p>
+        <pre><code class="language-shell">traceroute google.com</code></pre>
+    </section>
+
+    <section>
+        <h3>Connaitre l'adresse IP d'un serveur</h3>
+        <p><code class="language-shell">nslookup</code> est un programme permettant d'afficher les adresses IP correspondant à un nom de domaine.</p>
+        <pre><code class="language-shell">nslookup google.com</code></pre>
+    </section>
+
+    <section>
+        <h3>Requête / Réponse</h3>
+        <p><strong>Request</strong> : Récupérer le contenu à la racine du serveur répondant au domaine www.google.com</p>
+        <pre><code class="language-http">GET / HTTP/1.1
+Host: www.google.com</code></pre>
+        <p><strong>Response</strong> : Le serveur répond "OK" (données retournées sans erreur) et précise que la réponse contient du code HTML</p>
+        <pre><code class="language-http">HTTP/1.1 200 OK
+Content-Type: text/html</code></pre>
+    </section>
+
+</section>

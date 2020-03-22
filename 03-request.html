@@ -1,0 +1,217 @@
+<section id="request">
+
+    <section>
+        <h2>Requête</h2>
+    </section>
+
+    <section>
+        <h3>Présentation</h3>
+        <p>Une requête HTTP est envoyée du client vers le serveur.</p>
+        <p>Une requête HTTP est composée en 3 parties :</p>
+        <table>
+            <tbody>
+            <tr>
+                <th>Request Line</th>
+                <td>
+                    <ul>
+                        <li><strong>Request URL</strong> : URL recherchée (ex: /user/profile)</li>
+                        <li><strong>Request Method</strong> : Méthode HTTP utilisée (ex: GET, POST, DELETE...)</li>
+                        <li><strong>HTTP Version</strong> : Version HTTP utilisée (ex: HTTP/1.1)</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th>Request Headers</th>
+                <td>
+                    <ul>
+                        <li><strong>Host</strong> : Nom de domaine (ex: www.google.com)</li>
+                        <li><strong>User-Agent</strong> : Logiciel client utilisé (ex: Mozilla/5.0...)</li>
+                        <li><strong>HTTP Version</strong> : Version HTTP utilisée (ex: HTTP/1.1)</li>
+                    </ul>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h3>Response Codes</h3>
+        <table>
+            <tbody>
+            <tr>
+                <td>200</td>
+                <td>OK</td>
+            </tr>
+            <tr>
+                <td>301</td>
+                <td>Moved Permanently</td>
+            </tr>
+            <tr>
+                <td>302</td>
+                <td>Found</td>
+            </tr>
+            <tr>
+                <td>304</td>
+                <td>Not Modified</td>
+            </tr>
+            <tr>
+                <td>401</td>
+                <td>Unauthorized</td>
+            </tr>
+            <tr>
+                <td>403</td>
+                <td>Forbidden</td>
+            </tr>
+            <tr>
+                <td>404</td>
+                <td>Not Found</td>
+            </tr>
+            <tr>
+                <td>500</td>
+                <td>Internal Serveur Error</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h3>cURL</h3>
+        <p>cURL (client URL) est un programme permettant de transférer des données sur le réseau en utilisant différents protocoles.</p>
+        <p>Vous pouvez par exemple récupérer le code source de la toute première page HTML jamais créée avec la commande suivante :</p>
+        <pre><code class="language-shell">curl info.cern.ch</code></pre>
+    </section>
+
+    <section>
+        <h3>cURL</h3>
+        <p><code class="language-shell">-I</code> permet d'afficher dans le terminal les headers de la requête et non son contenu (également appelé "payload").</p>
+        <p>Essayez de récupérer le contenu HTML de la page d'accueil de Google :</p>
+        <pre><code class="language-shell">curl -I google.com</code></pre>
+    </section>
+
+    <section>
+        <h3>Devtools</h3>
+        <p>Les navigateurs disposent d'outils permettant d'inspecter les requêtes HTTP effectuées sur une page web.</p>
+        <p>Appuyez sur la touche <span class="keyboard-key">F12</span> puis ouvrez l'onglet "Network".</p>
+        <img src="assets/images/devtools-network.png" alt="Network">
+    </section>
+
+    <section>
+        <h3>URL</h3>
+        <img src="assets/images/url.png" alt="URL">
+    </section>
+
+    <section>
+        <h3>Request Method</h3>
+        <table>
+            <tbody>
+            <tr>
+                <td>GET</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>POST</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>PUT</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>PATCH</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>DELETE</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>...</td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h3>RESTFul</h3>
+        <p>REST (<strong>RE</strong>presentational <strong>RE</strong>tate <strong>T</strong>ransfer) définit un ensemble de règles à respecter lors de la création de web services (API).</p>
+        <table>
+            <thead>
+            <tr>
+                <th>URL</th>
+                <th>Method</th>
+                <th>Action</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="line-important">
+                <td>/products</td>
+                <td>GET</td>
+                <td>index</td>
+                <td>Retourne la liste des produits</td>
+            </tr>
+            <tr class="line-optional">
+                <td>/products/new</td>
+                <td>GET</td>
+                <td>new</td>
+                <td>Affiche le formulaire pour créer un produit</td>
+            </tr>
+            <tr class="line-important">
+                <td>/products</td>
+                <td>POST</td>
+                <td>create</td>
+                <td>Créer un produit</td>
+            </tr>
+            <tr class="line-important">
+                <td>/products/:id</td>
+                <td>GET</td>
+                <td>show</td>
+                <td>Retourne un produit</td>
+            </tr>
+            <tr class="line-optional">
+                <td>/products/:id/edit</td>
+                <td>GET</td>
+                <td>edit</td>
+                <td>Affiche le formulaire pour modifier un produit</td>
+            </tr>
+            <tr class="line-important">
+                <td>/products/:id</td>
+                <td>PUT</td>
+                <td>update</td>
+                <td>Mettre à jour un produit</td>
+            </tr>
+            <tr class="line-optional">
+                <td>/products/:id/delete</td>
+                <td>GET</td>
+                <td>delete</td>
+                <td>Affiche le formulaire pour supprimer un produit</td>
+            </tr>
+            <tr class="line-important">
+                <td>/products/:id</td>
+                <td>DELETE</td>
+                <td>destroy</td>
+                <td>Supprimer un produit</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h3>RESTFul</h3>
+        <div class="container">
+            <div class="col">
+                <ol reversed start="3">
+                    <li>Ajout d'informations sur les URI disponibles dans les réponses</li>
+                    <li>Utilisation des méthodes HTTP</li>
+                    <li>Distinction des ressources (personnes, produits...)</li>
+                    <li>Utilisation du protocole HTTP</li>
+                </ol>
+            </div>
+            <div class="col">
+                <img src="assets/images/restful.png" alt="RESTFul">
+            </div>
+        </div>
+    </section>
+
+</section>

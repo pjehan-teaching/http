@@ -1,0 +1,78 @@
+@import "blockquote";
+@import "keyboard";
+
+.reveal {
+
+    pre[class*="language-"] {
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 0.6em;
+        &:not(.line-numbers) {
+            padding: 0.5em;
+        }
+        code {
+            padding: 0;
+        }
+    }
+
+    .osi-model-container {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-column-gap: 0.5em;
+        grid-row-gap: 0.5em;
+        font-size: 0.8em;
+        .osi-model-title {
+            display: flex;
+            align-items: center;
+            h4 {
+                padding: 0.2em;
+                margin: 0;
+                background-color: #78b9e6;
+                color: white;
+                font-size: 1.5em;
+                font-weight: bold;
+                border: 5px solid white;
+            }
+            .osi-model-datatype {
+                margin: 0.2em;
+                padding: 5px;
+                background-color: #657b83;
+                color: white;
+                font-size: 0.7em;
+                line-height: 1em;
+                border: 3px solid white;
+            }
+        }
+        .osi-model-description {
+            display: flex;
+            align-items: center;
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                list-style-type: none;
+                padding: 0;
+                > li {
+                    margin: 0.2em;
+                    padding: 5px;
+                    background-color: #268bd2;
+                    color: white;
+                    font-size: 0.7em;
+                    line-height: 1em;
+                    border: 3px solid white;
+                }
+            }
+        }
+    }
+
+    table {
+        tr.line-important {
+            background-color: white;
+        }
+        tr.line-optional {
+            font-size: 0.6em;
+        }
+    }
+
+}
