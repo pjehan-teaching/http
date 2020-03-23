@@ -4,4 +4,85 @@
         <h2>Réponse</h2>
     </section>
 
+    <section>
+        <h3>Présentation</h3>
+        <p>Une réponse HTTP est composée en 3 parties :</p>
+        <table>
+            <tbody>
+            <tr>
+                <th>Status Line</th>
+                <td>
+                    <ul>
+                        <li><strong>HTTP Version</strong> : Version du protocole utilisé</li>
+                        <li><strong>Status Code</strong> : Code renvoyé par le serveur (200, 404...)</li>
+                        <li><strong>Reason Phrase</strong> : Version texte du code (OK, Not Found...)</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th>Request Headers</th>
+                <td>
+                    <ul>
+                        <li><strong>Server</strong> : Informations sur le serveur (Apache, Nginx...)</li>
+                        <li><strong>Content-Type</strong> : Type de contenu retourné (text/html, application/json...)</li>
+                        <li><strong>Content-Length</strong> : Taille du contenu retourné</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th>Request Body</th>
+                <td>Le contenu de la réponse</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h3>Présentation</h3>
+        <img src="assets/images/http-response.png" alt="HTTP Response">
+    </section>
+
+    <section>
+        <h3>Response Codes</h3>
+        <table>
+            <tbody>
+            <tr>
+                <td>200</td>
+                <td>OK</td>
+            </tr>
+            <tr>
+                <td>301</td>
+                <td>Moved Permanently</td>
+            </tr>
+            <tr>
+                <td>302</td>
+                <td>Found</td>
+            </tr>
+            <tr>
+                <td>304</td>
+                <td>Not Modified</td>
+            </tr>
+            <tr>
+                <td>401</td>
+                <td>Unauthorized</td>
+            </tr>
+            <tr>
+                <td>403</td>
+                <td>Forbidden</td>
+            </tr>
+            <tr>
+                <td>404</td>
+                <td>Not Found</td>
+            </tr>
+            <tr>
+                <td>500</td>
+                <td>Internal Serveur Error</td>
+            </tr>
+            </tbody>
+        </table>
+        <footer>
+            <a href="https://httpstatuses.com" class="info" target="_blank">Liste des codes</a>
+        </footer>
+    </section>
+
 </section>
